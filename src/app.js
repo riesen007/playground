@@ -1,4 +1,4 @@
-$heroku create myapp --buildpack heroku/python
+$heroku create myapp --buildpack heroku/nodejs
 'use strict';
 
 angular.module('tutorialApp', ['ngAnimate', 'ngRoute'])
