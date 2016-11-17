@@ -1,15 +1,26 @@
-$heroku buildpacks:set heroku/nodejs
 'use strict';
-angular.module('tutorialApp', [ 'ngAnimate', 'ngRoute' ]).config(
+angular.module('myApp', [ 'ngAnimate', 'ngRoute' ]).config(
 		function($routeProvider) {
-			$routeProvider.when('/linksAxa', {
-				templateUrl : 'linksAxa.html'
+			$routeProvider.when('/start', {
+				template : 'Seite ist noch im Aufbau...',
+				name : "Start"
+			}).when('/linksAxa', {
+				templateUrl : 'linksAxa.html',
+				name : "Links Axa"
 			}).when('/linksPrivat', {
-				templateUrl : 'linksPrivat.html'
-			}).when('/start', {
-				template : 'Hier steht noch nichts'
+				templateUrl : 'linksPrivat.html',
+				name : "Links Privat"
+			}).when('/fragen', {
+				template : 'Hier können Sie fragen stellen...',
+				name : "Fragen"
+			}).when('/about', {
+				template : 'Erfahren sie mehr über uns...',
+				name : "About"
+			}).when('/sonstiges', {
+				template : 'Hier gibts alles anderes...',
+				name : "Sonstiges"
 			}).otherwise({
-				redirectTo : '/'
+				redirectTo : '/start'
 			});
 		}).controller('LinksPrivatCtrl', function($scope, $http) {
 	$http.get('linksPrivat.json').then(function(linksPrivatResponse) {
@@ -17,7 +28,11 @@ angular.module('tutorialApp', [ 'ngAnimate', 'ngRoute' ]).config(
 	});
 
 }).controller('LinksAxaCtrl', function($scope, $http) {
-		$http.get('linksAxa.json').then(function(linksAxaResponse) {
-			$scope.linksAxa = linksAxaResponse.data;
-		});
+	$http.get('linksAxa.json').then(function(linksAxaResponse) {
+		$scope.linksAxa = linksAxaResponse.data;
+	});
+}).run(function($rootScope, $location, $route) {
+	$rootScope.$location = $location;
+	$rootScope.$route = $route;
+	$rootScope.keys = Object.keys;
 });
