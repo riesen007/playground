@@ -1,0 +1,28 @@
+<html ng-app="tutorialApp">
+<head>
+<meta charset="utf8" />
+<title>Welcome Page</title>
+<link rel="stylesheet"
+	href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Welcome</h1>
+	<div class="container">
+
+		<p class="well">
+			<a href="#/start">Startseite</a> | <a href="#/linksAxa">Links AXA</a> | <a href="#/linksPrivat">Links
+				Privat</a>
+		</p>
+		<div ng-view></div>
+
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
