@@ -1,0 +1,25 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "this is a test",
+  "main": "app.js",
+  "bin": {
+    "playground": "app.js"
+  },
+  "scripts": {
+    "test": "error"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riesen007/playground.git"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "daniel riesen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riesen007/playground/issues"
+  },
+  "homepage": "https://github.com/riesen007/playground#readme"
+}
