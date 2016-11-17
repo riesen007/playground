@@ -1,3 +1,4 @@
+$heroku create myapp --buildpack heroku/nodejs
 'use strict';
 angular.module('tutorialApp', [ 'ngAnimate', 'ngRoute' ]).config(
 		function($routeProvider) {
