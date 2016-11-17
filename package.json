@@ -23,8 +23,6 @@
   },
   "homepage": "https://github.com/riesen007/playground#readme",
   
-   "scripts": {
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app"
-    }
+"scripts": {
+  "start": "node app.js"
 }
