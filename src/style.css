@@ -6,3 +6,9 @@
 .cart-item.ng-enter-active {
   background-color: white;
 }
+
+body {
+	color: white;
+	font-family: ITC Franklin Gothic W01, Arial, sans-serif;
+	line-height: 1.375
+}
