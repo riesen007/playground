@@ -22,4 +22,11 @@
     "url": "https://github.com/riesen007/playground/issues"
   },
   "homepage": "https://github.com/riesen007/playground#readme"
+  
+   "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+    }
 }
