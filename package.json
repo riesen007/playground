@@ -6,9 +6,6 @@
   "bin": {
     "playground": "app.js"
   },
-  "scripts": {
-    "test": "error"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/riesen007/playground.git"
