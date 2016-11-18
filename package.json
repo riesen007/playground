@@ -24,6 +24,6 @@
 		"npm": ">= 3"
 	},
 "scripts": {
-  "start": "node app.js"
+  "start": "ng serve"
 }
 }
